@@ -1,17 +1,24 @@
-# Faça um programa que fique pedindo uma resposta do usuário, entre 1, 2 e 3.
-# Se o usuário digitar 1, o programa deve cadastrar um novo usuário nos moldes
-# do exercício 10 e guardar esse cadastro num dicionário cuja chave será o CPF da pessoa.
-# Quando o usuário digitar 2, o programa deve imprimir os usuários cadastrados; e se o
-# usuário digitar 3, o programa deve fechar.
+# Super desafio! Faça um sistema de cadastro de clientes. 
+# Modele cada cliente como uma lista de três elementos: nome, CPF e e-mail.
 
-# Exemplo do dicionário:
-# ‘987.654.321-00’: {‘nome’: Maria, ‘idade’: 20, ‘email’ : maria@mail.com}
+# a. Faça uma função que peça o nome, o CPF e o e-mail da pessoa e 
+# retorne uma lista contendo esses elementos nessa ordem.
+# b. Os clientes cadastrados devem ser armazenados em uma lista (uma lista de listas, já 
+# que cada cliente será uma lista tal como produzido no item a).
+# c. Faça uma função que recebe a lista do item b) e um CPF e, se esse 
+# cliente estiver na lista de cadastro, sua função deve devolver a lista
+# de dados desse cliente; caso contrário, sua função deve imprimir “não encontrado”.
+# d. Enquanto não for digitado 0, o seu programa deve continuar rodando. 
+# Se digitado 1, seu programa deve cadastrar um novo cliente; se digitado 2, seu 
+# programa deve pedir um CPF e procurá-lo na lista de clientes (item c); se digitado 3, 
+# seu programa deve imprimir todos os clientes cadastrados.
 nome = str('')
 cad = {}
 
 def cadastrar(nome=''):
     # Variáveis
     choice = str(".")
+    vitorias = int()
     cabecalho = str("Cadastro de Usuarios")
     cabecalho2 = str("por Gabriel Abades")
 
@@ -64,7 +71,3 @@ def inserir():
 
 cadastros = {}
 cadastrar()
-
-
-# if(__name__ == '__main__'):
-#     cadastrar()
